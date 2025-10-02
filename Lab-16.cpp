@@ -11,9 +11,9 @@ private:
 public:
     // Default constructor
     Color() {
-        red = 0;
-        green = 0;
-        blue = 0;
+        red = 255;
+        green = 255;
+        blue = 255;
     }
 
     // Parameterized constructor
@@ -51,18 +51,20 @@ public:
 
 int main() {
     // Using default constructor
-    Color color1;
+    Color color1;                       // White
     color1.print();
     
     // Using parameterized constructor
-    Color color2(255, 0, 0);
-    color2.print()
+    Color color2(255, 0, 0);            // Red
+    color2.print();
 
     // Using partial constructor
-    Color color3(0, 255);
+    Color color3(0, 255);               // Green
     color3.print();
 
     // Using parameterized constructor again
+    Color color4(128, 0, 128);
+    color4.print();                     // Purple
 
-
+    return 0;
 }
