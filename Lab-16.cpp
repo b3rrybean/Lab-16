@@ -9,6 +9,27 @@ private:
     int blue;
 
 public:
+    // Default constructor
+    Color() {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+    // Parameterized constructor
+    Color(int r, int g, int b) {
+        red = r;
+        green = g;
+        blue = b;
+    }
+
+    // Partial constructor
+    Color(int r, int g) {
+        red = r;
+        green = g;
+        blue = 0;
+    }
+
     // Setters
     void setRed(int r)      { red = r; }
     void setGreen(int g)    { green = g; }
@@ -29,26 +50,19 @@ public:
 };
 
 int main() {
+    // Using default constructor
     Color color1;
-    Color color2;
-    Color color3;
-
-    // Set values
-    color1.setRed(255);
-    color1.setGreen(0);
-    color1.setBlue(0);
-
-    color2.setRed(0);
-    color2.setGreen(255);
-    color2.setBlue(0);
-
-    color3.setRed(0);
-    color3.setGreen(0);
-    color3.setBlue(255);
-
-    // Print calls
     color1.print();
-    color2.print();
+    
+    // Using parameterized constructor
+    Color color2(255, 0, 0);
+    color2.print()
+
+    // Using partial constructor
+    Color color3(0, 255);
     color3.print();
-    return 0;
+
+    // Using parameterized constructor again
+
+
 }
